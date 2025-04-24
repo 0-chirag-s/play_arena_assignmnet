@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../store/store';
 import { setSelectedDate, setSelectedActivity } from '../store/slices/bookingSlice';
@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const Booking: React.FC = () => {
   const dispatch = useDispatch();
   const { selectedDate } = useSelector((state: RootState) => state.booking);
-  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  
   
   const activities = [
     { id: 'off-road', name: 'Off-Road ATV Adventure' },
